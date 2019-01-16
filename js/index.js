@@ -22,12 +22,17 @@ $(document).ready(()=>{
 			$('#pag1').removeClass('mostrar');
 			$('#pag1').addClass('ocultar');
 			$('.input-file label').removeClass('imgCamera')
-			$('#files').removeClass('img-fichero')
+            $('#files').removeClass('img-fichero')
+            var myImage=$('#files').val();
+            Tesseract.recognize(myImage)
+            .progress(message => console.log(message))
+            .catch(err => console.error(err))
+            .then(result => console.log(result))
+            .finally(resultOrError => console.log(resultOrError))
 
 		};
 	  }
-
-   
+      
 })
 
 	
