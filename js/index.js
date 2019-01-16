@@ -27,6 +27,11 @@ $(document).ready(()=>{
 		};
 	  }
 
+      var image="../img/rodalco.png";
+      Tesseract.recognize(image)
+  .then(function(result){
+      console.log(result)
+  })
 })
 
 	
