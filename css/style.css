@@ -264,11 +264,14 @@ body{
     background: transparent url(../img/btnfoto.png) no-repeat center center;
 }
 
-.input-file input[type=file] {
+.input-file input[type=file]{
+	opacity: 0;
+}
+.img-fichero {
    display: block;
    width: 100%;
    height: 100%;
-   opacity: 0;
+ 
 }
 .form-foto{
 	display: flex;

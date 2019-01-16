@@ -52,17 +52,21 @@
 	<div class="form-foto">
 			<form class="input-file">
 					<label class="imgCamera"></label>
-					<input id="files" type="file" accept="image/*" capture>
-					<div>
-					<span>1</span><input type="range" name="cantidad" min="1" max="4"><span>4</span>
+					<input class="img-fichero" id="files" type="file" accept="image/*" capture>
+					<div id="form-datos" class="ocultar">
+						<span>1</span><input type="range" name="cantidad" min="1" max="4"><span>4</span>
+											
+						<input type="text" name="nombre"  id="nombre" placeholder="Nombre">
+						<input type="email" name="email"  id="email" value="" placeholder="Email">
+						<input type="phone" name="telefono" id="telefono" placeholder="Teléfono">
+						<input type="submit" value="Enviar">
 					</div>
-					
-					<input type="text" name="nombre" class="ocultar" id="nombre">
-					<input type="email" name="email" class="ocultar" id="email" value="">
-			</form>		
+				</form>	
+				
 	</div>
 </div>
 </div>
+	
 <script>
 	$("#volverF").click(()=>{
 		location.reload();
@@ -81,10 +85,11 @@
 			img.setAttribute("style","display:block");
 			$('#previewImg').prepend(img);
 			$('#previewImg').removeClass('ocultar');
-			$('#nombre,#email').removeClass('ocultar');
+			$('#form-datos').removeClass('ocultar');
 			$('#pag1').removeClass('mostrar');
 			$('#pag1').addClass('ocultar');
 			$('.input-file label').removeClass('imgCamera')
+			$('#files').removeClass('img-fichero')
 
 		};
 	  }
