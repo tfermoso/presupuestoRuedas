@@ -23,7 +23,7 @@ $(document).ready(()=>{
 			$('#pag1').addClass('ocultar');
 			$('.input-file label').removeClass('imgCamera')
             $('#files').removeClass('img-fichero')
-            var myImage=$('#files').val();
+            var myImage=reader.result
             Tesseract.recognize(myImage)
             .progress(message => console.log(message))
             .catch(err => console.error(err))
