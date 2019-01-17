@@ -53,14 +53,14 @@
 <div class="">
 	<div class="form-foto">
 		
-			<form class="input-file" enctype="multipart/form-data" action="http://www.rodalco.es/apineumaticos/neudata.php" method="post">
+			<form id="formulario" class="input-file" enctype="multipart/form-data" action="http://www.rodalco.es/apineumaticos/neudata.php" method="post">
 				<input type="hidden" name="op" value="nuevasolicitud">
 				<input type="hidden" name="uuid" value="pruebas">	
 				<label class="imgCamera"></label>
 				<input class="img-fichero" id="files" name="imagen" type="file" accept="image/*" capture>
 				<div id="form-datos" class="ocultar">
 					<div id="infoNeumaticos"><label class="infoNeumaticos">Neumáticos:</label> <span id="valor" class="">5</span></div>
-					<div id="divRange"><span>1</span><input type="range" class="slider" id="myRange" name="cantidad" min="1" max="4"><span>4</span></div>										
+					<div id="divRange"><span>1</span><input type="range" class="slider" id="myRange" value=1 name="cantidad" min="1" max="4"><span>4</span></div>										
 						<div class="msg">Introduce tus datos</div>	
 					<input type="text" class="datosContacto" name="nombre"  id="nombre" placeholder="Nombre" required>
 						<input type="email" class="datosContacto" name="email"  id="email" value="" placeholder="Email" required>
@@ -73,8 +73,17 @@
 	</div>
 </div>
 </div>
-<script>
-	
-	</script>
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+	  <div class="modal-content">
+		<p>Su solicitud ha sido enviada CORRECTAMENTE
+			y será respondida en el menor tiempo posible
+			con las mejores OFERTAS para sus neumáticos</p>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" onclick="location.reload()" data-dismiss="modal">Cerrar</button>
+			  </div>	
+	  </div>
+	</div>
+</div>
 </body>
 </html>	

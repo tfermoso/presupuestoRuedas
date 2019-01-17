@@ -39,6 +39,25 @@ $(document).ready(()=>{
 	  slider.oninput = function() {
 		output.innerHTML = this.value;
 	  }
+
+	  $('#formulario').submit((e)=>{
+		e.preventDefault();
+		
+		var url = "http://www.rodalco.es/apineumaticos/neudata.php";
+		var fd = new FormData(document.getElementById("formulario"));
+		
+		$.ajax({
+		  url: url,
+		  type: "POST",
+		  data: fd,
+		  processData: false,  // tell jQuery not to process the data
+		  contentType: false,   // tell jQuery not to set contentType
+		  success:(datos)=>{
+			$('#myModal').modal()
+			  console.log(datos)
+		  }
+		});
+	  })
 })
 
 	
