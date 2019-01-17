@@ -380,11 +380,13 @@ body{
 
   input[type=submit]{
 	width: 80%;
+	padding: 5px;
 	margin: 6px 15px;
 	border-radius: 5px;
 	border: none;
 	color: white;
 	background-color: #EF473A;
+	font-size: 1.2rem;
   }
   #form-datos{
 	  margin-top:-30px;
