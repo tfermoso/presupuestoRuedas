@@ -250,9 +250,10 @@ body{
 
 .input-file {
     background-color: black;
-    width: 200px;
     height: 200px;
-    position: relative;   
+	position: relative;
+	width: 350px;
+   
 }
 
 .imgCamera {
@@ -305,3 +306,86 @@ body{
 	border-radius: 5px;
 	border-style: none;
 }
+
+
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 3px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+  }
+  
+  .slider:hover {
+	opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #EF473A;
+	cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #EF473A;
+	cursor: pointer;
+  }
+  #divRange{
+	  display: flex;
+	  align-items: center;
+  }
+  #divRange span{
+	  color: white;
+	  padding-left:15px;
+	  padding-right:15px;
+  }
+  #infoNeumaticos{
+	  margin:0 15px;
+	  display: flex;
+	  justify-content: space-between;
+	  color:white
+  }
+  #valor{
+	  background-color: #EF473A;
+	  border-radius: 50%;
+	  height: 25px;
+	  width: 25px;
+		text-align: center;
+	  color:white;
+  }
+  .msg{
+	  text-align: center;
+	  color: #EF473A
+  }
+  .datosContacto{
+	width: 80%;
+    margin: 3px 15px;
+	background-color: gray;
+	padding-left: 5px;
+	border-radius: 5px;
+	border: none;
+    color: white;
+  }
+
+  input[type=submit]{
+	width: 80%;
+	margin: 6px 15px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	background-color: #EF473A;
+  }
+  #form-datos{
+	  margin-top:-30px;
+  }

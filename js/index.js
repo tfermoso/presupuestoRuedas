@@ -23,16 +23,22 @@ $(document).ready(()=>{
 			$('#pag1').addClass('ocultar');
 			$('.input-file label').removeClass('imgCamera')
             $('#files').removeClass('img-fichero')
-            var myImage=reader.result
-            Tesseract.recognize(myImage)
-            .progress(message => console.log(message))
-            .catch(err => console.error(err))
-            .then(result => console.log(result))
-            .finally(resultOrError => console.log(resultOrError))
+            // var myImage=reader.result
+            // Tesseract.recognize(myImage)
+            // .progress(message => console.log(message))
+            // .catch(err => console.error(err))
+            // .then(result => console.log(result))
+            // .finally(resultOrError => console.log(resultOrError))
 
 		};
 	  }
-      
+      var slider = document.getElementById("myRange");
+	  var output = document.getElementById("valor");
+	  output.innerHTML = slider.value;
+	  
+	  slider.oninput = function() {
+		output.innerHTML = this.value;
+	  }
 })
 
 	
